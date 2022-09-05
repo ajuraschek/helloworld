@@ -1,16 +1,20 @@
-# This is a sample Python script.
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+'Hello World Program'
 
+__author__ = 'Andrew Juraschek' #code drawn from https://www.code-learner.com/python-module-introduction/
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+import sys
 
+def say_hello():
+    args = sys.argv
+    if len(args)==1:
+       print('Hello, World!')
+    elif len(args)==2:
+       print('Hello, %s!' % args[1])
+    else:
+       print('Too many arguments!')
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__=='__main__':
+     say_hello()
